@@ -1,5 +1,5 @@
 //Criando cliente na PAGAR.ME
-const apiKey = window.btoa("sk_test_2b51df83e9f04d1189f484d5594ad1f1");
+const apiKey = window.btoa("");
 
 function createCustomer() {
 
