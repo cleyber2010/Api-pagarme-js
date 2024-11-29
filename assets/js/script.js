@@ -1,5 +1,6 @@
 //Criando cliente na PAGAR.ME
-const apiKey = window.btoa("");
+
+const apiKey = window.btoa("APIKEY");
 
 function createCustomer() {
 
@@ -7,19 +8,20 @@ function createCustomer() {
         name: document.getElementById("name").value,
         document: document.getElementById("document").value,
         document_type: document.getElementById("document_type").value,
-        type: document.getElementById("type").value        
+        type: document.getElementById("type").value,
+        birthdate: "10/02/1993"      
     }
 
     const options = {
-        method: "POST",
+        method: 'POST',
         headers: {
-            accept: "application/json",
-            'content-type': "application/json",
-            'Access-Control-Allow-Origin': '*',
-            authorization: 'Basic c2tfdGVzdF8yYjUxZGY4M2U5ZjA0ZDExODlmNDg0ZDU1OTRhZDFmMTpza190ZXN0XzJiNTFkZjgzZTlmMDRkMTE4OWY0ODRkNTU5NGFkMWYx'
-        }, 
+          'Access-Control-Allow-Origin': '*',
+          accept: 'application/json',
+          'content-type': 'application/json',
+          authorization: 'Basic ' + apiKey
+        },
         body: JSON.stringify(data)
-    }
+      };
     
     fetch("https://api.pagar.me/core/v5/customers", options)
         .then((res) => {
