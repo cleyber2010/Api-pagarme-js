@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>API Pagar.me V5 JS</title>
+</head>
+<body>
+    <main>
+        <section class="main-container">
+            <div class="container">
+                <h1 class="text-center">API Pagar.me V5 JS</h1>
+                <form action="">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="name">Informe seu nome:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="document">Informe seu CPF ou CNPJ</label>
+                            <input type="text" id="document" name="document" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="document_type">Selecione o tipo do documento</label>
+                            <select name="document_type" id="document_type" class="form-select">
+                                <option value="CPF">CPF</option>
+                                <option value="CNPJ">CNPJ</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="type">Selecione o tipo de cliente</label>
+                            <select name="type" id="type" class="form-select">
+                                <option value="individual">Individual - Pessoa física</option>
+                                <option value="company">Empresa - Pessoa Jurídica</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" id="button" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
